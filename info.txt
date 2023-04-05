@@ -1,0 +1,9 @@
+github.com/gin-contrib/sse  
+	github.com/gin-gonic/gin  
+	github.com/go-playground/validator/v10  
+	github.com/golang-jwt/jwt/v4  
+	github.com/gorilla/websocket 
+	github.com/lib/pq  
+	github.com/rs/cors 
+	gorm.io/driver/postgres  
+	gorm.io/gorm  
