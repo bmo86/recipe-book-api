@@ -1,9 +1,14 @@
-github.com/gin-contrib/sse  
-	github.com/gin-gonic/gin  
-	github.com/go-playground/validator/v10  
-	github.com/golang-jwt/jwt/v4  
-	github.com/gorilla/websocket 
-	github.com/lib/pq  
-	github.com/rs/cors 
-	gorm.io/driver/postgres  
-	gorm.io/gorm  
+Model User Normal
+ -> gorm model
+ -> name
+ -> email
+ -> auth_provider email or google
+ -> hash_pass
+ -> auth_token
+
+Model recipe 
+ -> gorm model
+ -> name 
+ -> ingredients
+ -> status
+ -> UsrId

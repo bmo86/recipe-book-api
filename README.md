@@ -22,6 +22,7 @@ The following endpoints are available:
 - `GET /recipes/{id}`: Get a recipe by ID
 - `PUT /recipes/{id}`: Update a recipe by ID
 - `DELETE /recipes/{id}`: Delete a recipe by ID
+- `GET /recipes/ws`: websocket
 
 ### Request/Response Formats
 
