@@ -2,14 +2,11 @@ package repo
 
 import (
 	"recipe-book-api/models"
-
-	"golang.org/x/oauth2"
 )
 
 type RepoApp interface {
 	// functions usr
 	SingUpNormal(usr *models.User) (uint, error)
-	SingUpGoogle(usr *models.User) (oauth2.AuthCodeOption, error)
 	GetUserById(id uint) (*models.User, error)
 	GetUserEmail(email string) (*models.User, error)
 
