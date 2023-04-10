@@ -40,10 +40,10 @@ func NewServer(config *models.Config) (*Broker, error) {
 		return nil, errors.New("URL database empty")
 	}
 	if config.JWT_SECRET == "" {
-		return nil, errors.New("URL database empty")
+		return nil, errors.New("JWT secret empty")
 	}
 	if config.PORT == "" {
-		return nil, errors.New("URL database empty")
+		return nil, errors.New("port empty")
 	}
 	return &Broker{
 		config: config,
