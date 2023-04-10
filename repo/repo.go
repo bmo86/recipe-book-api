@@ -6,31 +6,22 @@ import (
 	"golang.org/x/oauth2"
 )
 
-type RepoUser interface {
+type RepoApp interface {
+	// functions usr
 	SingUpNormal(usr *models.User) (uint, error)
 	SingUpGoogle(usr *models.User) (oauth2.AuthCodeOption, error)
 	GetUserById(id uint) (*models.User, error)
 	GetUserEmail(email string) (*models.User, error)
+
+	//functions recipe
+	NewRecipe(recipe *models.Recipe) (uint, error)
+	DelteRecipe(id uint) error
+	UpdateRecipe(recipe models.Recipe) (uint, error)
+	GetRecipe(id uint) (*models.Recipe, error)
 }
 
-var repo_user RepoUser
+var repo_app RepoApp
 
-func SetRepoUser(repo RepoUser) {
-	repo_user = repo
-}
-
-func SingUpNormal(usr *models.User) (uint, error) {
-	return repo_user.SingUpNormal(usr)
-}
-
-func SingUpGoogle(usr *models.User) (oauth2.AuthCodeOption, error) {
-	return repo_user.SingUpGoogle(usr)
-}
-
-func GetUserById(id uint) (*models.User, error) {
-	return repo_user.GetUserById(id)
-}
-
-func GetUserEmail(email string) (*models.User, error) {
-	return repo_user.GetUserEmail(email)
+func SetRepo(repo RepoApp) {
+	repo_app = repo
 }
